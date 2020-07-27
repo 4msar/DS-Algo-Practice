@@ -12,19 +12,22 @@ void swap(int *first, int *last)
 void selectionSort(int Arr[], int length)
 {
 	int i, j, min;
-	for ( i = 0; i < length-1; i++){
+	for (i = 0; i < length - 1; i++)
+	{
 		min = i;
-		for ( j = i+1; j < length; j++){
-			if( Arr[j] < Arr[min] ){
+		for (j = i + 1; j < length; j++)
+		{
+			if (Arr[j] < Arr[min])
+			{
 				min = j;
 			}
 		}
-		swap(&Arr[min], &Arr[i]);	
+		swap(&Arr[min], &Arr[i]);
 	}
-	
 }
 
-void printArray(int Arr[], int length){
+void printArray(int Arr[], int length)
+{
 	for (int i = 0; i < length; i++)
 	{
 		printf("%d ", Arr[i]);
@@ -32,9 +35,11 @@ void printArray(int Arr[], int length){
 	printf("\n");
 }
 
-int main() {
+int main()
+{
 	int i, randomArray[20], count = 20;
-	for (i = 0; i <= count; i++){
+	for (i = 0; i < count; i++)
+	{
 		randomArray[i] = rand() % 100;
 	}
 
