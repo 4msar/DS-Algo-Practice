@@ -6,7 +6,7 @@ Data Structure &amp; Algorithm Practice
 - [x] Linear Search 
 - [x] Binary Search 
 - [x] Selection Sort 
-- [ ] Bubble Sort 
+- [x] Bubble Sort 
 - [ ] Insertion Sort 
 - [ ] Stack 
 - [ ] Queue 

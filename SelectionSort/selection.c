@@ -2,19 +2,25 @@
 #include <stdlib.h>
 #include <time.h>
 
-int* bubbleSort(int Arr[], int length)
+void swap(int* first, int* last)
 {
-    int i, j, temp;
-    for (i = 0; i < length; i++) {
-        for (j = 0; j < length - i - 1; j++) {
-            if (Arr[j] > Arr[j + 1]) {
-                temp = Arr[j];
-                Arr[j] = Arr[j + 1];
-                Arr[j + 1] = temp;
+    int temp = *first;
+    *first = *last;
+    *last = temp;
+}
+
+void selectionSort(int Arr[], int length)
+{
+    int i, j, min;
+    for (i = 0; i < length - 1; i++) {
+        min = i;
+        for (j = i + 1; j < length; j++) {
+            if (Arr[j] < Arr[min]) {
+                min = j;
             }
         }
+        swap(&Arr[min], &Arr[i]);
     }
-    return Arr;
 }
 
 void printArray(int Arr[], int length)
@@ -34,7 +40,7 @@ int main()
 
     printArray(randomArray, count);
 
-    bubbleSort(randomArray, count);
+    selectionSort(randomArray, count);
 
     printArray(randomArray, count);
 }

@@ -5,19 +5,14 @@ int binarySearch(int numbers[], int find, int length)
     int right, left, mid;
     left = 0;
     right = length - 1;
-    while (left <= right)
-    {
+    while (left <= right) {
         mid = (left + right) / 2;
-        if (numbers[mid] == find)
-        {
+        if (numbers[mid] == find) {
             return mid;
         }
-        if (numbers[mid] < find)
-        {
+        if (numbers[mid] < find) {
             left = mid + 1;
-        }
-        else
-        {
+        } else {
             right = mid - 1;
         }
     }
@@ -27,16 +22,13 @@ int binarySearch(int numbers[], int find, int length)
 
 int main()
 {
-    int numbers[] = {6, 12, 32, 36, 45, 48, 52, 56, 59, 65};
+    int numbers[] = { 6, 12, 32, 36, 45, 48, 52, 56, 59, 65 };
     int find;
     scanf("%d", &find);
     int result = binarySearch(numbers, find, 10);
-    if (result >= 0)
-    {
+    if (result >= 0) {
         printf("Index in Array: %d \nIndex : %d\n", numbers[result], result);
-    }
-    else
-    {
+    } else {
         printf("Number is not in the Array!\n");
     }
     return 0;
