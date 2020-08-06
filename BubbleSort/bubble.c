@@ -5,9 +5,10 @@
 int* bubbleSort(int Arr[], int length)
 {
     int i, j, temp;
-    for (i = 0; i < length; i++) {
-        for (j = 0; j < length - i - 1; j++) {
-            if (Arr[j] > Arr[j + 1]) {
+    for (i = 0; i < length; i++) { // outer loop for each item
+        for (j = 0; j < length - i - 1; j++) { // inner  loop for swap item
+            if (Arr[j] > Arr[j + 1]) { // check the item with next item
+                // swaping item to each other
                 temp = Arr[j];
                 Arr[j] = Arr[j + 1];
                 Arr[j + 1] = temp;

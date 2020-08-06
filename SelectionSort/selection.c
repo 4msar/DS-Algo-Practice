@@ -12,14 +12,14 @@ void swap(int* first, int* last)
 void selectionSort(int Arr[], int length)
 {
     int i, j, min;
-    for (i = 0; i < length - 1; i++) {
-        min = i;
-        for (j = i + 1; j < length; j++) {
-            if (Arr[j] < Arr[min]) {
+    for (i = 0; i < length - 1; i++) { // outer loop for item
+        min = i; // set the lowest index
+        for (j = i + 1; j < length; j++) { // inner loop for item
+            if (Arr[j] < Arr[min]) { // check the item is small then the lowest item
                 min = j;
             }
         }
-        swap(&Arr[min], &Arr[i]);
+        swap(&Arr[min], &Arr[i]); // swap the value
     }
 }
 

@@ -5,14 +5,20 @@ int binarySearch(int numbers[], int find, int length)
     int right, left, mid;
     left = 0;
     right = length - 1;
+    // comapre the left &  right
     while (left <= right) {
+        // set the middle point
         mid = (left + right) / 2;
+        // now check the ite is in the middle point
         if (numbers[mid] == find) {
-            return mid;
+            return mid; // if find then simply return the index
         }
+        // now check the side after/before middle point
         if (numbers[mid] < find) {
+            // move the item in left side
             left = mid + 1;
         } else {
+            // move the item in right side
             right = mid - 1;
         }
     }
